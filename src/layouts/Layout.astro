@@ -11,12 +11,13 @@ import Footer from '../components/Footer.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/src/styles/global.css" />
-		<title>Astro Basics</title>
-		<link rel="stylesheet" href="/src/styles/global.css">
+		<title>FromHomeAcademy | Learn English from home</title>
 	</head>
-	<body>
+	<body class="flex flex-col min-h-screen">
 		<Header />
-		<slot />
+		<main class="flex-1">
+			<slot />
+		</main>
 		<Footer />
 	</body>
 </html>
