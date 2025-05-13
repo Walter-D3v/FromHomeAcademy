@@ -1,0 +1,13 @@
+<script>
+    function toggleMenu() {
+    const menu = document.getElementById('menu-content');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (menu && menuIcon && closeIcon) {
+        menu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    }
+    }
+</script>
