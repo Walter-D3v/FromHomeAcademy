@@ -1,20 +1,41 @@
 ---
-
+import type Navbar from "./Navbar.astro";
 ---
-<nav class="bg-[rgb(110,70,143)] py-4">
+
+<nav class="bg-[rgba(255,255,255,0)] text-white py-6 px-9 backdrop-blur-md">
     <div class="container mx-auto flex items-center justify-between relative">
+  
       <!-- Logo -->
       <div class="flex items-center space-x-2 w-40 h-15">
-        <img src="/src/assets/FRomHomeLogo.png" alt="Logo" class="w-25 h-22 object-contain" />
-    
+        <img src="/src/assets/FRomHomeLogo-remove.png" alt="Logo" class="w-32 h-30 object-contain" />
       </div>
   
-      <!-- Menu Links -->
-      <div class="flex space-x-8">
-        <a href="#" class="text-white hover:text-gray-300 transition">Inicio</a>
-        <a href="#" class="text-white hover:text-gray-300 transition">Idiomas</a>
-        <a href="#" class="text-white hover:text-gray-300 transition">Servicios</a>
-        <a href="#" class="text-white hover:text-gray-300 transition">Nosotros</a>
+      <!-- Botón del menú (visible en móviles) -->
+      <div class="flex p-2 xl:px-0 lg:hidden">
+        <button onclick="toggleMenu()" class="relative w-10 h-10">
+          <img src="/src/assets/menu.svg" id="menu-icon" class="w-full h-full object-contain" />
+          <img src="/src/assets/close.svg" id="close-icon" class="w-full h-full object-contain hidden absolute top-0 left-0" />
+        </button>
+      </div>
+  
+      <!-- Menú de navegación -->
+      <div id="menu-content" class="hidden lg:flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 p-6 bg-white lg:bg-transparent text-[rgb(108,64,143)]  rounded-md absolute top-20 right-4 lg:static">
+        <a href="#" onclick="if(window.innerWidth < 1024) toggleMenu()" class="px-4 py-2 rounded-md hover:bg-[rgb(108,64,143)] hover:text-white transition duration-300 ease-in-out transform hover:scale-105">
+          Inicio
+        </a>
+        <a href="#" onclick="if(window.innerWidth < 1024) toggleMenu()" class="px-4 py-2 rounded-md hover:bg-[rgb(108,64,143)] hover:text-white transition duration-300 ease-in-out transform hover:scale-105">
+          Idiomas
+        </a>
+        <a href="#" onclick="if(window.innerWidth < 1024) toggleMenu()" class="px-4 py-2 rounded-md hover:bg-[rgb(108,64,143)] hover:text-white transition duration-300 ease-in-out transform hover:scale-105">
+          Servicios
+        </a>
+        <a href="#" onclick="if(window.innerWidth < 1024) toggleMenu()" class="px-4 py-2 rounded-md hover:bg-[rgb(108,64,143)] hover:text-white transition duration-300 ease-in-out transform hover:scale-105">
+          Nosotros
+        </a>
       </div>
     </div>
   </nav>
+
+
+
+   
